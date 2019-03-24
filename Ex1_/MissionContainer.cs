@@ -25,7 +25,14 @@ namespace Excercise_1
         // Define the indexer to allow client code to use [] notation.
         public Func<double, double> this[string str]
         {
-            get { return this.dictionary[str]; }
+            get
+            {
+                if (!this.dictionary.ContainsKey(str))
+                {
+                    this.dictionary[str] = val => val;
+                }
+                return this.dictionary[str];
+            }
             set { this.dictionary[str] = value; }
         }
         //a dictionary from string to function double func(double d) with delegate, syntax from google
