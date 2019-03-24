@@ -20,6 +20,7 @@ namespace Excercise_1
             {
                 result = f(result);
             }
+            this.OnCalculate?.Invoke(this, result);
             return result;
         }
 

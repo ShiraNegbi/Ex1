@@ -8,8 +8,6 @@ namespace Excercise_1
 {
     public class SingleMission : IMission
     {
-        // implement constructors and funcs
-        // implement interface finctions
         private Func<double, double> Func { get; set; }
         public string Name { get; }
         public string Type { get; }
@@ -18,7 +16,9 @@ namespace Excercise_1
 
         public double Calculate(double value)
         {
-            return this.Func(value);
+            double result = this.Func(value);
+            this.OnCalculate?.Invoke(this, result);
+            return result;
         }
 
         public SingleMission(Func<double, double> func, String name)
