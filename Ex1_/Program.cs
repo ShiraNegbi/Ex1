@@ -28,8 +28,6 @@ namespace Excercise_1
         }
         public static void Main(string[] args)
         {
-            // see what to implement
-            // run to see what else
             // part 2 - use the implemented fuctions in the events
             FunctionsContainer funcList = new FunctionsContainer();     // Creating the mission conatiner
             funcList["Double"] = val => val * 2;                    // Double the Value
