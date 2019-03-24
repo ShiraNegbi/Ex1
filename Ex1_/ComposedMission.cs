@@ -8,8 +8,6 @@ namespace Excercise_1
 {
     public class ComposedMission : IMission
     {
-        // implement constructors and funcs
-        // implement interface finctions
         private List<Func<double, double>> Funcs;
         public string Name { get; }
         public string Type { get; }
