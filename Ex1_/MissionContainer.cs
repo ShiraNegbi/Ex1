@@ -9,7 +9,6 @@ namespace Excercise_1
   
     public class FunctionsContainer
     {
-        // public delegate double DoubleToDouble(double x);
         private Dictionary<string, Func<double,double>> dictionary;
 
         public FunctionsContainer()
@@ -35,10 +34,5 @@ namespace Excercise_1
             }
             set { this.dictionary[str] = value; }
         }
-        //a dictionary from string to function double func(double d) with delegate, syntax from google
-        // a pointer to a func
-        // indexer - syntax from google
-        // func printavailable
-        // constructor
     }
 }
